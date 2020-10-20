@@ -1,5 +1,5 @@
 [build]
-  publish = "public"
+  publish = "out"
 
 [[plugins]]
   package = "netlify-plugin-cache-nextjs"
