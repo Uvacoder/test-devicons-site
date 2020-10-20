@@ -1,0 +1,17 @@
+# dependencies
+node_modules
+
+# testing
+coverage
+
+# production
+build
+.next
+
+# env files
+.env*
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*

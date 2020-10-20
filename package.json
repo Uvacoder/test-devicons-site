@@ -1,0 +1,25 @@
+{
+  "name": "devfont.com",
+  "version": "0.0.0",
+  "description": "The Devfont Website",
+  "author": "Alex Perronnet <alex@alexperronnet.io>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "autoprefixer": "^9.8.6",
+    "devfont": "^1.5.0",
+    "file-loader": "^6.1.1",
+    "match-sorter": "^4.2.0",
+    "next": "^9.5.5",
+    "raw-loader": "^4.0.2",
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0",
+    "simple-functional-loader": "^1.2.1",
+    "tailwindcss": "^1.9.4",
+    "zustand": "^3.1.3"
+  }
+}
