@@ -1,11 +1,8 @@
 [build]
-  publish = "out"
+  publish = 'public'
 
 [[plugins]]
-  package = "netlify-plugin-cache-nextjs"
+  package = 'netlify-plugin-gatsby-cache'
 
 [[plugins]]
-  package = "@netlify/plugin-sitemap"
-
-[[plugins]]
-  package = "netlify-plugin-submit-sitemap"
+  package = 'netlify-plugin-submit-sitemap'

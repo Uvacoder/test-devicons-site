@@ -1,6 +1,0 @@
-host: https://devfont.com
-
-Sitemap: https://devfont.com/sitemap.xml
-
-User-agent: *
-Allow: /*

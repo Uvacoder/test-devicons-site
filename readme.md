@@ -1,6 +1,6 @@
 # [devfont.com](https://devfont.com)
 
-This repo contains the source for [devfont.com](https://devfont.com). It was built with [Next.js](https://nextjs.org) and deployed on [Netlify](https://netlify.com).
+This repo contains the source for [devfont.com](https://devfont.com). It was built with [Gatsby](https://gatsbyjs.com) and deployed on [Netlify](https://netlify.com).
 
 ## Local development
 
@@ -14,14 +14,17 @@ cd devfont.com
 # install the dependencies
 npm install
 
-# starts the development mode
-npm run dev
+# start the development server
+gatsby develop
 
-# creates an optimized production build
-npm run build
+# make it ready for deployment
+gatsby build
 
-# starts in production mode
-npm run start
+# serve the production build for testing
+gatsby serve
+
+# wipe out the cache and public directories
+gatsby clean
 ```
 
 ---

@@ -1,17 +1,15 @@
 # dependencies
 node_modules
 
-# testing
-coverage
-
 # production
-build
-.next
+.cache
+public
 
 # env files
 .env*
 
+# optional npm cache directory
+.npm
+
 # debug
 npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
