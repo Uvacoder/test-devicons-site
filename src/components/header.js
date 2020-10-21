@@ -6,7 +6,7 @@ import { eventOutbound } from '@utils'
 
 export default function Header() {
   return (
-    <header className='flex flex-row justify-between items-center py-6 border-b-2 border-gray-100'>
+    <header className='flex flex-row justify-between items-center py-6 border-b-2 border-gray-900 border-opacity-50'>
       <div className='flex flex-row items-center space-x-5'>
         <h1 className='font-bold text-xl hover:underline'>
           <Link to='/'>

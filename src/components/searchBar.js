@@ -1,4 +1,5 @@
 import React from 'react'
+import { Icon } from '@components'
 
 export default function SearchBar({ placeholder, value, onChange, ...props }) {
   const inputElement = React.useRef(null)
@@ -16,7 +17,13 @@ export default function SearchBar({ placeholder, value, onChange, ...props }) {
   }, [])
 
   return (
-    <div className='sticky top-0 bg-gray-800 pt-4 max-w-full flex shadow-md'>
+    <form className='relative'>
+      <label
+        htmlFor='searchInput'
+        className='absolute top-0 bottom-0 pl-5 flex items-center text-gray-500'
+      >
+        <Icon name='search' />
+      </label>
       <input
         id='searchInput'
         type='search'
@@ -24,8 +31,8 @@ export default function SearchBar({ placeholder, value, onChange, ...props }) {
         placeholder={placeholder}
         value={value}
         onChange={onChange}
-        className='flex-auto p-5 text-sm font-mono rounded bg-gray-900 placeholder-gray-500 focus:outline-none focus:shadow-outline focus:placeholder-gray-600'
+        className='w-full p-5 pl-16 group font-mono rounded bg-gray-900 placeholder-gray-500 focus:outline-none focus:shadow-outline focus:placeholder-gray-600 shadow-md'
       />
-    </div>
+    </form>
   )
 }

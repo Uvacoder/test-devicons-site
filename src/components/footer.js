@@ -4,7 +4,7 @@ import { eventOutbound } from '@utils'
 
 export default function Footer() {
   return (
-    <footer className='flex flex-col sm:flex-row items-center justify-between space-y-5 sm:space-y-0 py-6 border-t-2 border-gray-100 text-sm'>
+    <footer className='flex flex-col sm:flex-row items-center justify-between space-y-5 sm:space-y-0 py-6 border-t-2 border-gray-900 border-opacity-50 text-sm'>
       <Outbound
         href='https://alexperronnet.io/'
         onClick={() => eventOutbound('alexperronnet.io')}
