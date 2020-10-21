@@ -18,8 +18,7 @@ module.exports = {
   ],
   theme: {
     fontFamily: {
-      sans: ['Roboto', ...defaultTheme.fontFamily.sans],
-      mono: ['Roboto Mono', ...defaultTheme.fontFamily.mono]
+      sans: ['Roboto', ...defaultTheme.fontFamily.sans]
     },
     container: {
       center: true,

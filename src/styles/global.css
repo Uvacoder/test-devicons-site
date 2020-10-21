@@ -24,10 +24,7 @@ body {
   @apply cursor-pointer;
 }
 
-::-webkit-search-decoration {
-  @apply hidden;
-}
-
-input {
+input[type='search'] {
   -webkit-appearance: none;
+  @apply rounded-sm;
 }

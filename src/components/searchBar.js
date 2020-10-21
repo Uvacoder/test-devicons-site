@@ -31,7 +31,7 @@ export default function SearchBar({ placeholder, value, onChange, ...props }) {
         placeholder={placeholder}
         value={value}
         onChange={onChange}
-        className='w-full p-5 pl-16 group font-mono rounded bg-gray-900 placeholder-gray-500 focus:outline-none focus:shadow-outline focus:placeholder-gray-600 shadow-md'
+        className='w-full p-5 pl-16 rounded-sm bg-gray-900 placeholder-gray-500 focus:outline-none focus:shadow-outline focus:placeholder-gray-600 shadow-md'
       />
     </form>
   )

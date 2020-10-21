@@ -16,7 +16,7 @@ export default function IconGrid({ icons }) {
         return (
           <li
             key={icon.name}
-            className='bg-gray-900 rounded shadow'
+            className='bg-gray-900 rounded-sm shadow'
           >
             <div className='flex flex-col items-center'>
               <Icon name={icon.name} className='my-10' />
@@ -31,7 +31,7 @@ export default function IconGrid({ icons }) {
                   eventCopy(icon.name)
                   toast.dark(`🦄 ${icon.name} copied as SVG!`)
                 }}
-                className='bg-gray-800 text-white text-xs py-2 mx-2 rounded focus:outline-none hover:bg-blue-600'
+                className='bg-gray-800 text-white text-xs py-2 mx-2 rounded-sm focus:outline-none hover:bg-blue-600'
               >
                 Copy
               </button>
@@ -41,7 +41,7 @@ export default function IconGrid({ icons }) {
                   eventDownload(icon.name)
                   toast.dark(`🦄 ${icon.name}.svg downloaded!`)
                 }}
-                className='bg-gray-800 text-white text-xs py-2 mx-2 rounded focus:outline-none hover:bg-blue-600'
+                className='bg-gray-800 text-white text-xs py-2 mx-2 rounded-sm focus:outline-none hover:bg-blue-600'
               >
                 Download
               </button>

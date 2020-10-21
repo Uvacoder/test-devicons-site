@@ -5,7 +5,7 @@
   "author": "Alex Perronnet <alex@alexperronnet.io>",
   "license": "MIT",
   "scripts": {
-    "develop": "gatsby develop",
+    "develop": "gatsby develop -H 0.0.0.0 -p 8000",
     "build": "gatsby build",
     "clean": "gatsby clean",
     "start": "gatsby start"
@@ -33,7 +33,6 @@
     "react-helmet": "^6.1.0",
     "react-toastify": "^6.0.9",
     "tailwindcss": "^1.9.5",
-    "typeface-roboto": "^1.1.13",
-    "typeface-roboto-mono": "^1.1.13"
+    "typeface-roboto": "^1.1.13"
   }
 }
