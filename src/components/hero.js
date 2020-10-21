@@ -3,7 +3,7 @@ import download from 'downloadjs'
 import JSZip from 'jszip'
 import { icons } from 'devfont'
 import { toast } from 'react-toastify'
-import { Outbound } from '@components'
+import { Outbound, Icon } from '@components'
 import { eventDownload, eventOutbound } from '@utils'
 
 export default function Hero() {
@@ -22,13 +22,14 @@ export default function Hero() {
            Made by @alexperronnet.
          </Outbound>
       </p>
-      <div className='flex flex-row items-center gap-5'>
+      <div className='flex flex-row items-center space-x-5'>
         <Outbound
           href='https://github.com/devfont/devfont#readme'
           onClick={() => eventOutbound('get started')}
-          className='px-5 py-3 text-sm rounded-sm duration-200 bg-blue-600 text-white hover:bg-blue-800'
+          className='px-5 py-3 text-xs sm:text-sm rounded-sm duration-200 bg-blue-600 text-white hover:bg-blue-800 flex flex-row items-center space-x-2'
         >
-          Get started
+          <Icon name='github-alt' className='opacity-50' />
+          <span>Get started</span>
         </Outbound>
         <button
           onClick={async () => {
@@ -37,9 +38,10 @@ export default function Hero() {
             eventDownload('all')
             toast.dark('🦄 devfont.zip downloaded!')
           }}
-          className='px-5 py-3 text-sm rounded-sm duration-200 bg-gray-900 hover:bg-gray-700 focus:outline-none'
+          className='px-5 py-3 text-xs sm:text-sm rounded-sm duration-200 bg-gray-900 hover:bg-gray-700 focus:outline-none flex flex-row items-center space-x-2'
         >
-          Download all
+          <Icon name='box' className='opacity-50' />
+          <span>Download all</span>
         </button>
       </div>
     </section>

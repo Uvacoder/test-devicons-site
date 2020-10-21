@@ -3,7 +3,7 @@ const websiteConfig = {
   author: '@alexperronnet',
   url: 'https://devfont.com',
   gaTrackingId: 'UA-156157580-3',
-  description: 'Beautiful open source hand-crafted SVG icon set for designers and developers'
+  description: 'Beautiful open source hand-crafted SVG icon set for designers and developers. Free for both personal and commercial use. Made by @alexperronnet'
 }
 
 module.exports = {
@@ -19,6 +19,7 @@ module.exports = {
     'gatsby-plugin-offline',
     'gatsby-plugin-netlify',
     'gatsby-plugin-postcss',
+    'gatsby-plugin-minify-html',
     {
       resolve: 'gatsby-plugin-manifest',
       options: {

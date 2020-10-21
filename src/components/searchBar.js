@@ -1,7 +1,7 @@
-import React, { useRef, useEffect } from 'react'
+import React from 'react'
 
 export default function SearchBar({ placeholder, value, onChange, ...props }) {
-  const inputElement = useRef(null)
+  const inputElement = React.useRef(null)
 
   function handleKeyDown(event) {
     if (event.key === '/' && inputElement.current !== document.activeElement) {
@@ -10,13 +10,13 @@ export default function SearchBar({ placeholder, value, onChange, ...props }) {
     }
   }
 
-  useEffect(() => {
+  React.useEffect(() => {
     window.addEventListener('keydown', handleKeyDown)
     return () => window.removeEventListener('keydown', handleKeyDown)
   }, [])
 
   return (
-    <form className='sticky top-0 bg-gray-800 pt-4'>
+    <div className='sticky top-0 bg-gray-800 pt-4 max-w-full flex shadow-md'>
       <input
         id='searchInput'
         type='search'
@@ -24,8 +24,8 @@ export default function SearchBar({ placeholder, value, onChange, ...props }) {
         placeholder={placeholder}
         value={value}
         onChange={onChange}
-        className='w-full p-5 rounded-sm border-2 border-gray-900 font-mono text-sm bg-gray-900 placeholder-gray-500 focus:outline-none focus:placeholder-gray-600 focus:border-blue-600 shadow-md'
+        className='flex-auto p-5 text-sm font-mono rounded bg-gray-900 placeholder-gray-500 focus:outline-none focus:shadow-outline focus:placeholder-gray-600'
       />
-    </form>
+    </div>
   )
 }

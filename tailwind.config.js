@@ -38,6 +38,9 @@ module.exports = {
           '800': '#272F37',
           '900': '#1D252C',
         }
+      },
+      boxShadow: {
+        outline: '0 0 0 3px #1C64F2'
       }
     }
   }

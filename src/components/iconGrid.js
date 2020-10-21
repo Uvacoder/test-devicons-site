@@ -24,7 +24,7 @@ export default function IconGrid({ icons }) {
                 {icon.name}
               </h3>
             </div>
-            <div className='flex flex-col gap-2 mb-2'>
+            <div className='flex flex-col space-y-2 mb-2'>
               <button
                 onClick={async () => {
                   copy(icon.toSvg())
