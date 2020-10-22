@@ -27,7 +27,7 @@ export default function Header() {
           onClick={() => eventOutbound('donate')}
           className='px-3 py-2 rounded-sm text-white duration-200 text-sm flex flex-row items-center space-x-2 bg-green-600 hover:bg-green-800'
         >
-          <Icon name='heart' className='opacity-50' />
+          <Icon name='coin' className='opacity-50' />
           <span className='sr-only sm:not-sr-only'>
             Donate
           </span>

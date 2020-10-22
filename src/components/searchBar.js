@@ -17,7 +17,7 @@ export default function SearchBar({ placeholder, value, onChange, ...props }) {
   }, [])
 
   return (
-    <form className='relative'>
+    <div className='relative'>
       <label
         htmlFor='searchInput'
         className='absolute top-0 bottom-0 pl-5 flex items-center text-gray-500'
@@ -33,6 +33,6 @@ export default function SearchBar({ placeholder, value, onChange, ...props }) {
         onChange={onChange}
         className='w-full p-5 pl-16 rounded-sm bg-gray-900 placeholder-gray-500 focus:outline-none focus:shadow-outline focus:placeholder-gray-600 shadow-md'
       />
-    </form>
+    </div>
   )
 }
