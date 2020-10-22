@@ -3,6 +3,37 @@ import Helmet from 'react-helmet'
 import { useStaticQuery, graphql } from 'gatsby'
 
 export default function Head({ pageTitle }) {
+  class Hidden extends React.Component {
+    constructor(props) {
+      super(props)
+      this.state = {
+        title: document.title,
+        hiddenTitle: 'Come Back...'
+      }
+    }
+  
+    componentDidMount() {
+      document.addEventListener('visibilitychange', this.handleVisibilityChange)
+    }
+  
+    componentWillUnmount() {
+      document.removeEventListener('visibilitychange', this.handleVisibilityChange)
+    }
+  
+    handleVisibilityChange = () => {
+      if (document.hidden) {
+        document.title = this.state.hiddenTitle
+      }
+      else {
+        document.title = this.state.title
+      }
+    }
+  
+    render() {
+      return (<div/>)
+    }
+  }
+
   const data = useStaticQuery(graphql`
     {
       site {
@@ -18,25 +49,9 @@ export default function Head({ pageTitle }) {
 
   const { title, description, author, siteUrl } = data.site.siteMetadata
 
-  React.useEffect(() => {
-    window.onload = function() {
-      const pageTitle = document.title;
-      const inactiveMessage = `Come back to ${title}`
-    
-      document.addEventListener("visibilitychange", function(e) {
-        const isPageActive = !document.hidden
-    
-        if(!isPageActive){
-          document.title = inactiveMessage
-        }else {
-          document.title = pageTitle
-        }
-      })
-    }
-  })
-
   return (
-    <Helmet
+    <div>
+      <Helmet
       htmlAttributes={{lang: 'en'}}
       titleTemplate={`${title} \u2013 %s`}
       title={pageTitle}
@@ -51,5 +66,7 @@ export default function Head({ pageTitle }) {
       <meta property='og:type' content='website' />
       <meta property='og:image' content={`${siteUrl}/og-image.png`} />
     </Helmet>
+    <Hidden />
+    </div>
   )
 }
