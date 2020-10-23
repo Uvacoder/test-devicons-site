@@ -10,13 +10,9 @@ module.exports = {
     standardFontWeights: true,
     defaultLineHeights: true
   },
-  purge: {
-    mode: 'all',
-    content: ['src/**/*.js'],
-    options: {
-      keyframes: true
-    }
-  },
+  purge: [
+    'src/**/*.js'
+  ],
   theme: {
     fontFamily: {
       sans: ['Roboto', ...defaultTheme.fontFamily.sans]
