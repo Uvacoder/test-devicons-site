@@ -8,16 +8,22 @@ import { eventCopy, eventDownload } from '@utils'
 
 export default function IconGrid({ icons }) {
   return (
-    <ul
+    <div
       className='grid gap-5 my-5'
       style={{ gridTemplateColumns: 'repeat(auto-fill, minmax(132px, 1fr))'}}
     >
       {icons.map((icon) => {
         return (
-          <li
+          <article
             key={icon.name}
-            className='bg-gray-900 rounded-sm shadow'
+            className='bg-gray-900 rounded-sm shadow relative'
           >
+            {icon.tags.includes('new-icon') && (
+              <span className='absolute right-0 top-0 px-5 py-3'>
+                <span className='absolute h-2 w-2 rounded-full bg-blue-600 animate-ping' />
+                <span className='absolute h-2 w-2 rounded-full bg-blue-600 opacity-100' />
+              </span>
+            )}
             <div className='flex flex-col items-center'>
               <Icon name={icon.name} className='my-10' />
               <h3 className='text-xs mb-5'>
@@ -46,9 +52,9 @@ export default function IconGrid({ icons }) {
                 Download
               </button>
             </div>
-          </li>
+          </article>
         )
       })}
-    </ul>
+    </div>
   )
 }
