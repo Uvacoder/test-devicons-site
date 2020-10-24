@@ -18,20 +18,12 @@ export default function IconGrid({ icons }) {
             key={icon.name}
             className='bg-gray-900 rounded-sm shadow relative'
           >
-            <div className='absolute flex flex-row space-x-3 right-0 pt-2 pr-3'>
-              {icon.tags.includes('new-item') && (
-                <div className='flex'>
-                  <span className='h-2 w-2 rounded-full bg-blue-600 animate-ping' />
-                  <span className='h-2 w-2 rounded-full bg-blue-600 absolute' />
-                </div>
-              )}
-              {icon.tags.includes('official-brand') && (
-                <div className='flex'>
-                  <span className='h-2 w-2 rounded-full bg-yellow-600 animate-ping' />
-                  <span className='h-2 w-2 rounded-full bg-yellow-600 absolute' />
-                </div>
-              )}
-            </div>
+            {icon.tags.includes('new-item') && (
+              <div className='absolute flex right-0 pt-2 pr-3'>
+                <span className='h-2 w-2 rounded-full bg-blue-600 animate-ping' />
+                <span className='h-2 w-2 rounded-full bg-blue-600 absolute' />
+              </div>
+            )}
             <div className='flex flex-col items-center'>
               <Icon name={icon.name} className='my-10' />
               <h3 className='text-xs mb-5'>

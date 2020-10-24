@@ -42,25 +42,14 @@ export default function Hero() {
           <span>Download all</span>
         </button>
       </div>
-      <div className='flex flex-row space-x-5'>
-        <div className='flex space-x-3 items-center'>
-          <div className='flex'>
-            <span className='h-2 w-2 rounded-full bg-blue-600 animate-ping' />
-            <span className='h-2 w-2 rounded-full bg-blue-600 absolute' />
-          </div>
-          <p className='text-xs'>
-            New items
-          </p>
+      <div className='flex space-x-3 items-center'>
+        <div className='flex'>
+          <span className='h-2 w-2 rounded-full bg-blue-600 animate-ping' />
+          <span className='h-2 w-2 rounded-full bg-blue-600 absolute' />
         </div>
-        <div className='flex space-x-3 items-center'>
-          <div className='flex'>
-            <span className='h-2 w-2 rounded-full bg-yellow-600 animate-ping' />
-            <span className='h-2 w-2 rounded-full bg-yellow-600 absolute' />
-          </div>
-          <p className='text-xs'>
-            Official brands
-          </p>
-        </div>
+        <p className='text-xs'>
+          New items from the last release.
+        </p>
       </div>
     </section>
   )
