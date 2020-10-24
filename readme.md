@@ -1,9 +1,9 @@
 # [devfont.com](https://devfont.com)
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/f9a37dde-a083-4991-8d4c-e84fb0180ebf/deploy-status)](https://app.netlify.com/sites/devfont/deploys)
-[![Website](https://img.shields.io/website?url=https%3A%2F%2Fdevfont.com)](https://devfont.com)
-[![License](https://img.shields.io/github/license/devfont/devfont.com)](/license)
-[![Donate](https://img.shields.io/badge/donate-paypal-blue)](https://paypal.com/paypalme/alexperronnet/5)
+[![Website](https://img.shields.io/website?down_color=red&style=flat-square&up_color=blue&url=https%3A%2F%2Fdevfont.com)](https://devfont.com)
+[![License](https://img.shields.io/github/license/devfont/devfont.com?color=blue&style=flat-square)](/license)
+[![Donate](https://img.shields.io/badge/donate-paypal-blue?style=flat-square)](https://paypal.com/paypalme/alexperronnet/5)
 
 This repo contains the source for [devfont.com](https://devfont.com). It was built with [Gatsby](https://gatsbyjs.com) and deployed on [Netlify](https://netlify.com).
 
