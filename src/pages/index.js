@@ -1,22 +1,20 @@
-import React from 'react'
-import { icons } from 'devfont'
-import { useSearch } from '@utils'
-import { Wrapper, Hero, SearchBar, IconGrid, NoResults } from '@components'
+import React from "react"
 
-export default function HomePage() {
-  const [query, setQuery] = React.useState('')
+import { useSearch } from "@hooks"
+import { Wrapper, Hero, SearchBar, IconGrid, NoResults } from "@components"
+
+const Home = () => {
+  const [query, setQuery] = React.useState("")
+
   const results = useSearch(query)
 
   return (
-    <Wrapper pageTitle='Beautiful open source icon set'>
+    <Wrapper title="Beautiful open source icons">
       <Hero />
-      <div className='sticky top-0 pt-5 z-50 bg-gray-800'>
-        <SearchBar
-          placeholder={`Search all ${Object.keys(icons).length} icons (Press "/" to focus)`}
-          value={query || ''}
-          onChange={event => setQuery(event.target.value)}
-        />
-      </div>
+      <SearchBar
+        value={query || ""}
+        onChange={event => setQuery(event.target.value)}
+      />
       {results.length > 0 ? (
         <IconGrid icons={results} />
       ) : (
@@ -25,3 +23,5 @@ export default function HomePage() {
     </Wrapper>
   )
 }
+
+export default Home

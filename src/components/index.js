@@ -1,11 +1,15 @@
-export { default as Footer } from './footer'
-export { default as Head } from './head'
-export { default as Header } from './header'
-export { default as Hero } from './hero'
-export { default as Icon } from './icon'
-export { default as IconGrid } from './iconGrid'
-export { default as NoResults } from './noResults'
-export { default as Notice } from './notice'
-export { default as Outbound } from './outbound'
-export { default as SearchBar } from './searchBar'
-export { default as Wrapper } from './wrapper'
+export * from "./exports/atoms"
+export * from "./exports/buttons"
+export * from "./exports/customStyles"
+export * from "./exports/document"
+export * from "./exports/footer"
+export * from "./exports/header"
+export * from "./exports/hero"
+export * from "./exports/iconCard"
+export * from "./exports/iconGrid"
+export * from "./exports/messageTop"
+export * from "./exports/navMob"
+export * from "./exports/noResults"
+export * from "./exports/searchBar"
+export * from "./exports/themeToggle"
+export * from "./exports/wrapper"

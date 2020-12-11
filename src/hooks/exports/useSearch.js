@@ -1,13 +1,14 @@
-import React from 'react'
-import Fuse from 'fuse.js'
-import { icons } from 'devfont'
+import React from "react"
+import Fuse from "fuse.js"
+
+import { icons } from "@utils"
 
 const fuse = new Fuse(Object.values(icons), {
   threshold: 0.2,
-  keys: ['name', 'tags']
+  keys: ["name", "tags"]
 })
 
-export default function useSearch(query) {
+export const useSearch = query => {
   const [results, setResults] = React.useState(Object.values(icons))
 
   React.useEffect(() => {

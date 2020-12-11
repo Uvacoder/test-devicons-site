@@ -1,13 +1,23 @@
-const path = require('path')
+const path = require("path")
 
-exports.onCreateWebpackConfig = ({ actions }) => {
+exports.onCreateWebpackConfig = ({ getConfig, stage, actions }) => {
+  const config = getConfig()
+
+  if (stage.startsWith("develop") && config.resolve) {
+    config.resolve.alias = {
+      ...config.resolve.alias,
+      "react-dom": "@hot-loader/react-dom"
+    }
+  }
+
   actions.setWebpackConfig({
     resolve: {
       alias: {
-        '@components': path.resolve(__dirname, 'src/components'),
-        '@pages': path.resolve(__dirname, 'src/pages'),
-        '@styles': path.resolve(__dirname, 'src/styles'),
-        '@utils': path.resolve(__dirname, 'src/utils')
+        "@components": path.resolve(__dirname, "src/components"),
+        "@context": path.resolve(__dirname, "src/context"),
+        "@hooks": path.resolve(__dirname, "src/hooks"),
+        "@pages": path.resolve(__dirname, "src/pages"),
+        "@utils": path.resolve(__dirname, "src/utils")
       }
     }
   })

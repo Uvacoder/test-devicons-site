@@ -1,58 +1,51 @@
-const websiteConfig = {
-  name: 'Devfont',
-  author: '@alexperronnet',
-  url: 'https://devfont.com',
-  gaTrackingId: 'UA-156157580-3',
-  description: 'Beautiful open source hand-crafted SVG icon set for designers and developers. Free for both personal and commercial use. Made by @alexperronnet'
-}
+const site = require("./config/website")
 
 module.exports = {
   siteMetadata: {
-    title: websiteConfig.name,
-    author: websiteConfig.author,
-    siteUrl: websiteConfig.url,
-    description: websiteConfig.description
+    title: site.name,
+    author: site.author,
+    siteUrl: site.url,
+    description: site.description
   },
   plugins: [
-    'gatsby-plugin-react-helmet',
-    'gatsby-plugin-sitemap',
-    'gatsby-plugin-offline',
-    'gatsby-plugin-netlify',
-    'gatsby-plugin-postcss',
-    'gatsby-plugin-minify-html',
+    "gatsby-plugin-react-helmet",
+    "gatsby-plugin-styled-components",
+    "gatsby-plugin-sitemap",
+    "gatsby-plugin-offline",
+    "gatsby-plugin-netlify",
     {
-      resolve: 'gatsby-plugin-manifest',
+      resolve: "gatsby-plugin-manifest",
       options: {
-        name: websiteConfig.name,
-        short_name: websiteConfig.name,
-        start_url: '/',
-        background_color: '#ffffff',
-        theme_color: '#ffffff',
-        display: 'standalone',
-        icon: 'static/favicon.png',
+        name: site.name,
+        short_name: site.name,
+        start_url: "/",
+        background_color: "#fff",
+        theme_color: "#fff",
+        display: "standalone",
+        icon: "static/favicon.png",
         icon_options: {
-          purpose: 'maskable'
+          purpose: "maskable"
         }
       }
     },
     {
-      resolve: 'gatsby-plugin-canonical-urls',
+      resolve: "gatsby-plugin-canonical-urls",
       options: {
-        siteUrl: websiteConfig.url
+        siteUrl: site.url
       }
     },
     {
-      resolve: 'gatsby-plugin-google-analytics',
+      resolve: "gatsby-plugin-google-analytics",
       options: {
-        trackingId: websiteConfig.gaTrackingId
+        trackingId: site.gaTrackingId
       }
     },
     {
-      resolve: 'gatsby-plugin-robots-txt',
+      resolve: "gatsby-plugin-robots-txt",
       options: {
-        host: websiteConfig.url,
-        sitemap: `${websiteConfig.url}/sitemap.xml`,
-        policy: [{userAgent: '*', allow: '/'}]
+        host: site.url,
+        sitemap: `${site.url}/sitemap.xml`,
+        policy: [{ userAgent: "*", allow: "/" }]
       }
     }
   ]
