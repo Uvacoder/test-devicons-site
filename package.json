@@ -2,7 +2,7 @@
   "name": "devfont.com",
   "version": "0.0.0",
   "description": "The Devfont Website",
-  "author": "Alex Perronnet <alex@alexperronnet.io>",
+  "author": "Alex Perronnet <aperronnet.pro@gmail.com>",
   "license": "MIT",
   "scripts": {
     "develop": "gatsby develop -H 0.0.0.0 -p 8000",
