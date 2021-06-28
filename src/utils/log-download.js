@@ -1,7 +1,7 @@
-export const eventOutbound = label => {
+export default function logDownload(label) {
   if (typeof window.ga === "function") {
     window.ga("send", "event", {
-      eventCategory: "outbound link",
+      eventCategory: "download",
       eventAction: "click",
       eventLabel: label
     })

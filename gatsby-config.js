@@ -1,26 +1,42 @@
-const site = require("./config/website")
+const website = {
+  name: "Devfont",
+  author: "@alexperronnet",
+  url: "https://devfont.com",
+  gaTrackingId: "UA-156157580-3",
+  description: "Beautiful open source hand-crafted SVG icon set for designers and developers. Free for both personal and commercial use. Made by @alexperronnet"
+}
 
 module.exports = {
+  flags: {
+    DEV_SSR: false
+  },
   siteMetadata: {
-    title: site.name,
-    author: site.author,
-    siteUrl: site.url,
-    description: site.description
+    title: website.name,
+    author: website.author,
+    siteUrl: website.url,
+    description: website.description
   },
   plugins: [
-    "gatsby-plugin-react-helmet",
-    "gatsby-plugin-styled-components",
-    "gatsby-plugin-sitemap",
-    "gatsby-plugin-offline",
-    "gatsby-plugin-netlify",
+    {
+      resolve: "gatsby-plugin-canonical-urls",
+      options: {
+        siteUrl: website.url
+      }
+    },
+    {
+      resolve: "gatsby-plugin-google-analytics",
+      options: {
+        trackingId: website.gaTrackingId
+      }
+    },
     {
       resolve: "gatsby-plugin-manifest",
       options: {
-        name: site.name,
-        short_name: site.name,
-        start_url: "/",
-        background_color: "#fff",
-        theme_color: "#fff",
+        name: website.name,
+        short_name: website.shortName,
+        start_url: website.url,
+        background_color: `#fff`,
+        theme_color: `#fff`,
         display: "standalone",
         icon: "static/favicon.png",
         icon_options: {
@@ -28,25 +44,23 @@ module.exports = {
         }
       }
     },
-    {
-      resolve: "gatsby-plugin-canonical-urls",
-      options: {
-        siteUrl: site.url
-      }
-    },
-    {
-      resolve: "gatsby-plugin-google-analytics",
-      options: {
-        trackingId: site.gaTrackingId
-      }
-    },
+    "gatsby-plugin-netlify",
+    "gatsby-plugin-offline",
+    "gatsby-plugin-react-helmet",
     {
       resolve: "gatsby-plugin-robots-txt",
       options: {
-        host: site.url,
-        sitemap: `${site.url}/sitemap.xml`,
-        policy: [{ userAgent: "*", allow: "/" }]
+        host: website.url,
+        sitemap: `${website.url}/sitemap.xml`,
+        policy: [
+          {
+            userAgent: "*",
+            allow: "/"
+          }
+        ]
       }
-    }
+    },
+    "gatsby-plugin-sitemap",
+    "gatsby-plugin-styled-components"
   ]
 }

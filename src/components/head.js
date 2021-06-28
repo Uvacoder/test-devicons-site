@@ -2,10 +2,22 @@ import React from "react"
 import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 
-import { useInactiveTab } from "@hooks"
+export default function Head({ title }) {
 
-export const Document = ({ title, meta }) => {
-  useInactiveTab()
+  React.useEffect(() => {
+    const pageTitle = document.title
+    const inactiveMessage = "😴 Zzz..."
+
+    document.addEventListener("visibilitychange", function (event) {
+      const isPageActive = !document.hidden
+
+      if (!isPageActive) {
+        document.title = inactiveMessage
+      } else {
+        document.title = pageTitle
+      }
+    })
+  })
 
   const data = useStaticQuery(graphql`
     query {
@@ -25,7 +37,7 @@ export const Document = ({ title, meta }) => {
   return (
     <Helmet
       htmlAttributes={{ lang: "en" }}
-      titleTemplate={`${siteMetadata.title} \u2013 %s`}
+      titleTemplate={`${siteMetadata.title} \u2014 %s`}
       title={title}
       defer={false}
       meta={[

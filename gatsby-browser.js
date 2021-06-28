@@ -1,31 +1,14 @@
-import React from "react"
-import { ToastContainer } from "react-toastify"
-
-import "typeface-fira-sans"
-import "tailwindcss/dist/base.min.css"
-import "react-toastify/dist/ReactToastify.min.css"
-
-import { ThemeProvider } from "@context"
+import "typeface-roboto"
+import "typeface-roboto-mono"
+import "react-toastify/dist/ReactToastify.css"
 
 console.log(
   "%cHELLO FRIEND, WELCOME TO THE CONSOLE",
   `
-    background-color: #1e293b;
-    color: #e2e8f0;
+    background-color: #000;
+    color: #fff;
     font-size: 2rem;
     font-weight: bold;
     padding: 4rem;
   `
-)
-
-export const wrapRootElement = ({ element }) => (
-  <ThemeProvider>
-    {element}
-    <ToastContainer
-      position="top-center"
-      autoClose={2000}
-      pauseOnHover={false}
-      pauseOnFocusLoss={false}
-    />
-  </ThemeProvider>
 )

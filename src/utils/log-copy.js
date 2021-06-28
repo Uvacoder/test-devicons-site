@@ -1,7 +1,7 @@
-export const eventDownload = label => {
+export default function logCopy(label) {
   if (typeof window.ga === "function") {
     window.ga("send", "event", {
-      eventCategory: "download",
+      eventCategory: "copy",
       eventAction: "click",
       eventLabel: label
     })

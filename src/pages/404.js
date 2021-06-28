@@ -2,32 +2,41 @@ import React from "react"
 import { Link } from "gatsby"
 import tw, { styled } from "twin.macro"
 
-import {
-  Wrapper,
-  ContainerSmall,
-  IconBig,
-  PageTitle,
-  PageSubtitle,
-  Text
-} from "@components"
+import { Layout, Icon, Container } from "@components"
 
-const NotFound = () => (
-  <Wrapper title="Page not found">
-    <ContainerSmall center="true">
-      <IconBig name="ban" />
-      <PageTitle red="true">Sorry, that doesn't exist!</PageTitle>
-      <PageSubtitle>Oops, how'd you end up here?</PageSubtitle>
-      <Text small="true" center="true">
-        The Princess is in another castle... Click <Home /> for back to safety.
-      </Text>
-    </ContainerSmall>
-  </Wrapper>
-)
+const StyledSection = styled(Container)`
+  ${tw`py-14 sm:py-20 flex flex-col space-y-8 items-center text-center`}
 
-const Home = () => <StyledLink to="/">here</StyledLink>
+  svg {
+    ${tw`h-16 w-16 sm:h-24 sm:w-24 text-gray-300`}
+  }
 
-const StyledLink = styled(Link)`
-  ${tw`text-secondary hover:underline`}
+  a {
+    ${tw`text-blue-500 hover:underline`}
+  }
 `
 
-export default NotFound
+const home = (
+  <Link to="/">
+    here
+  </Link>
+)
+
+export default function NotFound() {
+  return (
+    <Layout title="Page not found">
+      <StyledSection as="section" size="small">
+        <Icon name="bug" />
+        <h1>
+          Sorry, that doesn't exist! 
+        </h1>
+        <h2>
+          Oops, how'd you end up here?
+        </h2>
+        <p>
+          The princess is in another castle... Click {home} for back to safety.
+        </p>
+      </StyledSection>
+    </Layout>
+  )
+}

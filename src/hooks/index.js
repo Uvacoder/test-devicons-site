@@ -1,3 +1,2 @@
-export * from "./exports/useInactive"
-export * from "./exports/useIsMobile"
-export * from "./exports/useSearch"
+export { default as useIsMobile } from "./use-is-mobile"
+export { default as useSearch } from "./use-search"

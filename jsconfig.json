@@ -3,9 +3,9 @@
     "baseUrl": ".",
     "paths": {
       "@components": ["src/components"],
-      "@context": ["src/context"],
       "@hooks": ["src/hooks"],
       "@pages": ["src/pages"],
+      "@sections": ["src/sections"],
       "@utils": ["src/utils"]
     }
   }

@@ -1,7 +1,7 @@
-export const eventCopy = label => {
+export default function logOutboundLink(label) {
   if (typeof window.ga === "function") {
     window.ga("send", "event", {
-      eventCategory: "copy",
+      eventCategory: "outbound link",
       eventAction: "click",
       eventLabel: label
     })

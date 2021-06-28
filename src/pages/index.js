@@ -1,15 +1,17 @@
 import React from "react"
 
 import { useSearch } from "@hooks"
-import { Wrapper, Hero, SearchBar, IconGrid, NoResults } from "@components"
+import { Layout, ToastContainer } from "@components"
+import { Hero, SearchBar, IconGrid, NoResults } from "@sections"
 
-const Home = () => {
+export default function Home() {
+  
   const [query, setQuery] = React.useState("")
 
   const results = useSearch(query)
 
   return (
-    <Wrapper title="Beautiful open source icons">
+    <Layout title="Premium icon pack">
       <Hero />
       <SearchBar
         value={query || ""}
@@ -20,8 +22,7 @@ const Home = () => {
       ) : (
         <NoResults query={query} />
       )}
-    </Wrapper>
+      <ToastContainer />
+    </Layout>
   )
 }
-
-export default Home

@@ -8,7 +8,7 @@ const fuse = new Fuse(Object.values(icons), {
   keys: ["name", "tags"]
 })
 
-export const useSearch = query => {
+export default function useSearch(query) {
   const [results, setResults] = React.useState(Object.values(icons))
 
   React.useEffect(() => {

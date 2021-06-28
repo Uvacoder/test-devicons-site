@@ -1,6 +1,6 @@
 import React from "react"
 
-export const useIsMobile = () => {
+export default function useIsMobile() {
   const [windowDimension, setWindowDimension] = React.useState(null)
 
   React.useEffect(() => {
