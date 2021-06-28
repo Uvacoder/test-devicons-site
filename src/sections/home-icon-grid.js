@@ -9,6 +9,9 @@ import { IconCard } from "@sections"
 import { useIsMobile } from "@hooks"
 import { logCopy, logDownload } from "@utils"
 
+const ROW_HEIGHT = 125
+const MAX_COLUMN_WIDTH = 125
+
 const StyledIconGrid = styled.section`
   ${tw`-m-2.5 mb-5`}
   min-height: ${ROW_HEIGHT};
@@ -21,9 +24,6 @@ const StyledIconGrid = styled.section`
     }
   }
 `
-
-const ROW_HEIGHT = 125
-const MAX_COLUMN_WIDTH = 125
 
 export default function IconGrid({ icons }) {
   const{ isMobile } = useIsMobile()
