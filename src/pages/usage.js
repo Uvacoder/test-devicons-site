@@ -145,7 +145,7 @@ devfont.icons.x.toSvg({ class: "foo bar", "stroke-width": 1, color: "red" })
   <use xlink:href="path/to/devfont-sprite.svg#circle"/>
 </svg>
 `,
-  css: `.feather {
+  css: `.devfont {
   width: 24px;
   height: 24px;
   stroke: currentColor;
@@ -155,8 +155,8 @@ devfont.icons.x.toSvg({ class: "foo bar", "stroke-width": 1, color: "red" })
   fill: none;
 }
 `,
-  class: `<svg class="feather">
-  <use xlink:href="path/to/dist/feather-sprite.svg#circle"/>
+  class: `<svg class="devfont">
+  <use xlink:href="path/to/dist/devfont-sprite.svg#circle"/>
 </svg>
 `
 }
