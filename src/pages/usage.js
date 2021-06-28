@@ -84,29 +84,47 @@ const license = (
   </OutboundLink>
 )
 
+const feather = (
+  <OutboundLink
+    href="https://github.com/feathericons/feather"
+    onClick={() => logOutboundLink("Feather repo")}
+  >
+    Feather repo
+  </OutboundLink>
+)
+
+const featherWebsite = (
+  <OutboundLink
+    href="https://feathericons.com/"
+    onClick={() => logOutboundLink("Feather website")}
+  >
+    Feather website
+  </OutboundLink>
+)
+
 const snippet = {
   npm: "npm install devfont",
   yarn: "yarn add devfont",
-  script: `<script src="path/to/dist/devfont.js" />`,
-  cdn: `<script src="https://unpkg.com/devfont" />`,
-  use: `<i data-devfont="circle" />`,
+  script: `<script src="path/to/dist/devfont.js"></script>`,
+  cdn: `<script src="https://unpkg.com/devfont"></script>`,
   require: `const devfont = require("devfont")`,
   replace: `<script>
   devfont.replace()
 </script>`,
   html: `<!DOCTYPE html>
 <html lang="en">
-  <script src="https://unpkg.com/devfont" />
+  <script src="https://unpkg.com/devfont"></script>
   <body>
 
     <!-- example icon -->
-    <i data-devfont="circle" />
+    <i data-devfont="circle"></i>
 
     <script>
       devfont.replace()
     </>
   </body>
 </html>`,
+  use: `<i data-devfont="circle"></i>`,
   use2: `devfont.icons.x
 // {
 //    name: "x",
@@ -250,6 +268,10 @@ export default function Usage() {
           <h2>License</h2>
           <p>
             Devfont is licensed under the {license}. All the icons are free for both personal and commercial use.
+          </p>
+          <h2>Credits</h2>
+          <p>
+            Based on Feather Icons. See the {feather} and the {featherWebsite}.
           </p>
         </div>
       </StyledSection>
