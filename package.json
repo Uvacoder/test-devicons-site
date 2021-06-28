@@ -19,7 +19,7 @@
   },
   "dependencies": {
     "copy-to-clipboard": "^3.3.1",
-    "devfont": "^3.5.0",
+    "devfont": "^3.5.1",
     "downloadjs": "^1.4.7",
     "fuse.js": "3.4.5",
     "gatsby": "^3.7.2",
