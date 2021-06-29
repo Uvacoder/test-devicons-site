@@ -9,10 +9,15 @@ const StyledSearchBar = styled.div`
   ${tw`pt-5 sm:pt-0 pb-5 sticky top-20 sm:top-24 z-10 bg-white`}
 
   .caption {
-    ${tw`py-5 text-xs text-gray-500`}
+    ${tw`py-5 flex items-center text-xs text-gray-500`}
 
     span {
       ${tw`px-2 py-1 bg-gray-100 border-2 border-gray-200 rounded-md font-medium`}
+    }
+
+    svg,
+    span{
+      ${tw`mx-1`}
     }
   }
 
@@ -71,7 +76,7 @@ export default function SearchBar({ value, onChange, ...props }) {
     <StyledSearchBar {...props}>
       {!isMobile && (
         <div className="caption">
-          Simply click for download and press <span>Shift</span> for copy to clipboard.
+          Simply <Icon name="mouse-2" /> to download or <span>Shift</span> + <Icon name="mouse-2" /> to copy.
         </div>
       )}
       <div className="input-search">
