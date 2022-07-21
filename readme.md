@@ -4,7 +4,7 @@
 [![Website](https://img.shields.io/website?down_color=red&style=flat-square&up_color=blue&url=https%3A%2F%2Fdevfont.com)](https://devfont.com)
 [![License](https://img.shields.io/github/license/devfont/devfont.com?color=blue&style=flat-square)](/license.md)
 
-This repo contains the source for [devfont.com](https://devfont.com). It was built with [Gatsby](https://gatsbyjs.com) and deployed on [Netlify](https://netlify.com).
+This repo contains the source for [devfont.com](https://ap-devfont.netlify.app/). It was built with [Gatsby](https://gatsbyjs.com) and deployed on [Netlify](https://netlify.com).
 
 ## Local development
 
